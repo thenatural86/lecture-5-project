@@ -11,4 +11,6 @@ count = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('button').onclick = count;
+
+    setInterval(count, 1000)
 });
