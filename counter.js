@@ -1,6 +1,6 @@
 let counter = 0;
 
-function count(){
+count = () => {
     counter++;
     document.querySelector('h1').innerHTML = counter;
 
@@ -9,6 +9,6 @@ function count(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('button').onclick = count;
 });
