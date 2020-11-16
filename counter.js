@@ -1,6 +1,6 @@
-// check if there is already a value in local storage
+// check if there is not a value in local storage
 if(!localStorage.getItem('counter')){
-    // if not, ser the counter to 0 in local storage
+    // if not, set the counter to 0 in local storage
     localStorage.setItem('counter', 0)
 }
 
@@ -15,6 +15,7 @@ count = () => {
     // if (counter % 10 === 0){
     //     alert(`Count is now ${counter}`)
     // }
+
     // store in local storage
     localStorage.setItem('counter', counter);
 }
