@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(data.rates);
             const currency = document.querySelector('#currency').value.toUpperCase();
             // get the rate from data
+            // dot notation would try to access a property called 'currency'
+            // square brackets allow us to access a variable called 'currency'
             const rate = data.rates[currency]
             // display
 
@@ -17,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 document.querySelector('#result').innerHTML = 'Invalid Currency.' 
             } 
-        });
-        return false
+        })
+        .catch(error => {
+            console.log('Error:', error)
+        })
+     return false
     }
 });
